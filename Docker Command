@@ -1,0 +1,32 @@
+sudo usermod -aG docker username //we install docker using root user. To avoid this we add docker to get the usurpermission else we will need sudo in all command.
+    docker pull redis // Pull redis image from docker hub
+    docker ps // List of Running container
+    docker ps -a // List of all container
+    run -d redis // run the image
+    docker ps
+    docker images // List docker images
+    docker run redis //create and exit
+    docker ps
+    docker run -d redis // run image in background
+    docker ps
+    docker stop 0e6faedbda22(Container Id) // Stop container Id
+    docker ps
+    docker start 0e6faedbda22 // start container 
+    docker ps
+    docker run redis:4.0 // docker run pulls image and start container
+    docker run -d python // run in background
+    Container needs to run on different port to interact with applications.
+    Multiple container runs on host machine
+    Laptop has certain ports
+    Conflict when same port on host machine. However you can have two container with same port if host binding is done
+    Ex - We have local host and then host will figure out how it will bind locally. We will bind the port using run command
+    Stop all container
+    docker run -p6000:6379 redis//port binding
+    docker ps 
+    docker ps -a // taker container id
+    docker start eb5a656fed1c
+    docker ps //Check if binding is done. This port can nnot be used by other container
+
+
+    Debugging Docker
+    
