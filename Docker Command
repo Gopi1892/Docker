@@ -26,7 +26,13 @@ sudo usermod -aG docker username //we install docker using root user. To avoid t
     docker ps -a // taker container id
     docker start eb5a656fed1c
     docker ps //Check if binding is done. This port can nnot be used by other container
-
+    docker run -d -it -p6000:6739 imagename
+    docker run -d -p6000:6379 --name redis-older redis:4.0
+    docker run -dit -p6002:6379 --name python-new httpd
 
     Debugging Docker
+    docker logs container id //Logs of container
+    Log inside container
+    docker exec -it 86afc34c792b /bin/bash
+    to exit type exit.
     
