@@ -29,6 +29,8 @@ sudo usermod -aG docker username //we install docker using root user. To avoid t
     docker run -d -it -p6000:6739 imagename
     docker run -d -p6000:6379 --name redis-older redis:4.0
     docker run -dit -p6002:6379 --name python-new httpd
+    docker image rm -f (nameofimage or name:version) // Delete image
+    docker container rm -f (nameofcontainer or container) // Delete Container
 
     Debugging Docker
     docker logs container id //Logs of container
