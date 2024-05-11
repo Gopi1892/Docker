@@ -1,0 +1,9 @@
+FROM teqstories516/webserver
+RUN  apt-get update && apt-get upgrade -y
+CMD  ["httpd-foreground"]
+
+Commands to execute
+docker build . -t test
+docker image ls
+docker run --name web -p80:80 -dt test
+docker ps
